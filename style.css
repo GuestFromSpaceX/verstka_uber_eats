@@ -1,19 +1,23 @@
 body {
-    display: flex;
-    flex: 1 1 1124px;
-
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "article"
+        "footer";
     margin: 0px;
     background: #F2F2F2;
 }
 
-.header {
+header {
+    grid-area: header;
+
     position: relative;
-    height: 72px;
     background: #FFFFFF;
     box-shadow: 0px 0px 16px rgba(38, 38, 38, 0.16);
 
     display: flex;
     flex: 1 1 1124px;
+    max-height: 72px;
     justify-content: space-around;
     align-items: center;
 }
@@ -30,8 +34,6 @@ body {
 }
 
 .header_to {
-    position: relative;
-
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 300;
@@ -90,58 +92,56 @@ body {
 
 
 
-.main {
+main {
+    grid-area: article;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    flex: 1 1 956px;
+    max-width: 956px;
+    margin-left: 10%;
+    margin-right: 10%;
+
     background: #F2F2F2;
+}
+
+#main_input {
+    max-width: 100%;
+}
+
+#main_grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(308px, 1fr));
 
 }
 
-.footer {
-    position: absolute;
+.main_grid_cell {
+    min-width: 308px;
+    min-height: 366px;
+}
+.main_grid_cell_name {
+    max-width: 308px;
+    margin-right: 0px;
+}
+.main_grid_cell_kichen {
+    max-width: 308px;
+    margin-right: 0px;
+}
+.main_grid_cell_timeto {
+    max-width: 308px;
+    margin-right: 0px;
+}
+
+footer {
+    grid-area: footer;
+
     display: flex;
     width: 100%;
     height: 552px;
     left: 0px;
     top: 1468px;
     background: #262626;
-}
-
-.footer_line_top {
-    position: absolute;
-    justify-self: center;
-    width: 956px;
-    height: 10px;
-    top: 116px;
-    background: #FFFFFF;
-    mix-blend-mode: normal;
-    opacity: 0.4;
-}
-
-.footer_line_mid {
-    position: absolute;
-    width: 90%;
-    height: 10px;
-    left: 81px;
-    right: 81px;
-    top: 337px;
-    background: #FFFFFF;
-    mix-blend-mode: normal;
-    opacity: 0.4;
-}
-
-.footer_line_bot {
-    position: absolute;
-    padding-right: 81px;
-    padding-left: 81px;
-    width: 100%;
-    height: 10px;
-    top: 456px;
-    background: #FFFFFF;
-    mix-blend-mode: normal;
-    opacity: 0.4;
-}
-
-*, 
-*:after,
-*:before {
-    box-sizing: border-box;
 }
