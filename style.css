@@ -70,9 +70,12 @@ header {
 
 .header_second_input {
     height: 40px;
-    width: 292px;
+    width: 259px;
     border: 1px solid #E0E0E0;
     border-radius: 2px;
+
+    background: url(./media/geo-marck.svg) no-repeat scroll 12px;
+    padding-left: 36px;
 }
 .header_buttons {
     display: flex;
@@ -143,6 +146,28 @@ main {
     margin-bottom: 15px;
 }
 
+#main_input {
+    width: 100%;
+    border:#FFFFFF;
+    background: url(./media/lupa.png) no-repeat scroll 2px;
+    padding: 30px;
+    background-size: 24px;
+}
+
+#main_input::placeholder{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+
+    color: #626262;
+
+    mix-blend-mode: normal;
+    opacity: 0.5;
+}
+
 #main_input_bottom_line {
     height: 1px;
     background: #757575;
@@ -152,9 +177,6 @@ main {
     margin-bottom: 56px;
 }
 
-#main_input {
-
-}
 
 .main_hided_inputs {
     display: none;
@@ -182,9 +204,12 @@ main {
 
 .main_hided_inputs_second_input {
     height: 40px;
-    width: 220px;
+    width: 187px;
     border: 1px solid #E0E0E0;
     border-radius: 2px;
+
+    background: url(./media/geo-marck.svg) no-repeat scroll 12px;
+    padding-left: 36px;
 }
 
 #main_grid_title {
